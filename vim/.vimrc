@@ -9,6 +9,7 @@ set incsearch
 set ignorecase
 set smartcase
 set showcmd
+set ttimeoutlen=100
 
 " hlsearch
 augroup vimrc-incsearch-highlight
@@ -64,9 +65,9 @@ hi clear SignColumn
 hi link lspReference LineNr
 
 
-
 " Maps
 nnoremap ,f :LspDocumentFormat<CR>
 nnoremap ,r :LspRename<CR>
 nnoremap ,h :LspHover<CR>
 nnoremap ,pd :LspPeekDefinition<CR>
+nnoremap ,a :LspCodeAction<CR>
